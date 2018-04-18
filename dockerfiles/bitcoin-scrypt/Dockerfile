@@ -54,5 +54,6 @@ RUN echo addnode=65.102.140.115:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN echo addnode=62.59.168.89:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN chmod 0600 ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 
-VOLUME ${BTCS_USER_HOMEDIR}
-ENTRYPOINT [${BTCS_OUT_BINARY}, "-daemon"]
+VOLUME "/home/bitcoin-scrypt"
+CMD ["/usr/local/bin/bitcoin-scryptd", "-daemon"]
+ENTRYPOINT ["/usr/local/bin/bitcoin-scryptd"]
