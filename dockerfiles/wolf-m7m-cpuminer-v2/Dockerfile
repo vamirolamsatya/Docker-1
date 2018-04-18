@@ -19,7 +19,7 @@ RUN cd ${WORKDIR}/m7 && perl -pi -e "s/\-flto//g" *
 
 RUN	cd ${WORKDIR} && ./autogen.sh
 RUN	cd ${WORKDIR} && ./configure CFLAGS="-O3"
-RUN	cd ${WORKDIR} && make
+RUN	cd ${WORKDIR} && make -j$(nproc --ignore=1)
 
 WORKDIR ${WORKDIR}
 ENTRYPOINT ["./minerd", "-a", "m7mhash"]

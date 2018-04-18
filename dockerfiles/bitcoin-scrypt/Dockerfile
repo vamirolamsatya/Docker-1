@@ -36,7 +36,7 @@ RUN apt-get update
 RUN apt-get -y install libdb4.8++-dev
 
 RUN git clone ${BTCS_BUILD_GITHUB} ${BTCS_BUILD_SRCDIR}
-RUN cd ${BTCS_BUILD_SRCDIR}/src && make -f makefile.unix USE_UPNP=- USE_IPV6=1
+RUN cd ${BTCS_BUILD_SRCDIR}/src && make -f makefile.unix USE_UPNP=- USE_IPV6=1 -j$(nproc --ignore=1)
 RUN strip ${BTCS_BUILD_SRCDIR}/src/bitcoin-scryptd
 RUN install -m 0755 ${BTCS_BUILD_SRCDIR}/src/bitcoin-scryptd ${BTCS_OUT_BINARY}
 
