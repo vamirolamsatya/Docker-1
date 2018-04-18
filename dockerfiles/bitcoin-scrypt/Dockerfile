@@ -10,8 +10,7 @@ ENV BTCS_USER_NAME="bitcoin-scrypt"
 ENV BTCS_USER_HOMEDIR="/home/bitcoin-scrypt"
 ENV BTCS_CONF_DIR="/home/bitcoin-scrypt/.bitcoin-scrypt"
 ENV BTCS_CONF_FILE="bitcoin-scrypt.conf"
-ENV BTCS_USE_PNP="-"
-ENV BTCS_USE_IPV6="0"
+ENV BTCS_USE_IPV6="1"
     
 RUN apt-get update
 RUN apt-get -y upgrade
