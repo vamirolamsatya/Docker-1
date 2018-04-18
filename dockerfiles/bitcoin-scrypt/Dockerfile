@@ -15,7 +15,7 @@ ENV BTCS_NAME="bitcoin-scrypt" \
     BTCS_CONF_DIR="/home/bitcoin-scrypt/.bitcoin-scrypt" \
     BTCS_CONF_FILE="bitcoin-scrypt.conf" \
     BTCS_CONF_RPCUSER="bitcoin-scrypt" \
-    BTCS_CONF_RPCPASS="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
+    BTCS_CONF_RPCPASS="CKfGIvsFLIqkfnF2mfClesr37ecgxrO6"
 
 HEALTHCHECK --interval=1m --timeout=10s \
    CMD curl -f --user ${BTCS_CONF_RPCUSER}:${BTCS_CONF_RPCPASS} --data "{\"method\": \"getinfo\"}" http://127.0.0.1:30200 || exit 1
@@ -55,5 +55,3 @@ RUN echo addnode=62.59.168.89:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN chmod 0600 ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 
 VOLUME "/home/bitcoin-scrypt"
-CMD ["/usr/local/bin/bitcoin-scryptd", "-daemon"]
-ENTRYPOINT ["/usr/local/bin/bitcoin-scryptd"]
