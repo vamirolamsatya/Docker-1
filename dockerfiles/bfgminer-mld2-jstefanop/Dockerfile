@@ -14,7 +14,8 @@ RUN	cd /usr/src && git clone https://github.com/jstefanop/bfgminer
 
 RUN cd /usr/src/bfgminer && ./autogen.sh
 RUN cd /usr/src/bfgminer && ./configure --prefix=/usr/local CFLAGS="-O3"
-RUN	cd /usr/src/bfgminer && make -j$(nproc)
+RUN	cd /usr/src/bfgminer && make -j$(nproc --ignore=1)
 
-ENTRYPOINT ["/usr/local/bin/bfgminer"]
+WORKDIR "/usr/src/bfgminer"
+ENTRYPOINT ["./bfgminer"]
 
