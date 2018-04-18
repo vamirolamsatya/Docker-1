@@ -1,3 +1,7 @@
 #!/bin/bash
-git pull
-docker build -t bitcoin-scrypt .
+
+GIT=$(which git)
+DOCKER=$(which docker)
+
+${GIT} pull
+${DOCKER} build -t bitcoin-scrypt .

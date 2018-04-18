@@ -29,5 +29,5 @@ RUN echo addnode=138.201.185.23:30201 >> /home/bitcoin-scrypt/.bitcoin-scrypt/bi
 RUN echo addnode=65.102.140.115:30201 >> /home/bitcoin-scrypt/.bitcoin-scrypt/bitcoin-scrypt.conf
 RUN chmod 0600 /home/bitcoin-scrypt/.bitcoin-scrypt/bitcoin-scrypt.conf
 
-#CMD ["/home/bitcoin-scrypt/bin/bitcoin-scryptd" "-daemon"]
+ENTRYPOINT ["/home/bitcoin-scrypt/bin/bitcoin-scryptd" "-daemon"]
 
