@@ -14,12 +14,10 @@ RUN add-apt-repository -y ppa:bitcoin/bitcoin
 RUN apt-get update
 RUN apt-get -y install libdb4.8++-dev
 
-RUN cd /usr/src
-RUN cd /usr/src && git clone https://github.com/BloodyNora/bitcoin-scrypt
-
-RUN cd /usr/src/bitcoin-scrypt/src && make -f makefile.unix USE_UPNP=- USE_IPV6=1 -j$(nproc)
+RUN git clone https://github.com/BloodyNora/bitcoin-scrypt /usr/src/bitcoin-scrypt
+RUN cd /usr/src/bitcoin-scrypt/src && make -f makefile.unix USE_UPNP=- USE_IPV6=0 -j$(nproc)
 RUN strip /usr/src/bitcoin-scrypt/src/bitcoin-scryptd
-RUN install -m 0755 /usr/src/bitcoin-scrypt/src/bitcoin-scryptd /usr/local/bin
+RUN install -m 0755 /usr/src/bitcoin-scrypt/src/bitcoin-scryptd /usr/bin
 
 RUN useradd -m -d /home/bitcoin-scrypt -s /bin/bash bitcoin-scrypt
 USER bitcoin-scrypt
