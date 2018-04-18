@@ -21,7 +21,6 @@ RUN cd /usr/src/bitcoin-scrypt/src && make -f makefile.unix USE_UPNP=- USE_IPV6=
 RUN strip /usr/src/bitcoin-scrypt/src/bitcoin-scryptd
 RUN install -m 0755 /usr/src/bitcoin-scrypt/src/bitcoin-scryptd /usr/local/bin
 
-VOLUME /home/bitcoin-scrypt
 RUN useradd -m -d /home/bitcoin-scrypt -s /bin/bash bitcoin-scrypt
 USER bitcoin-scrypt
 
@@ -35,5 +34,4 @@ RUN echo addnode=138.201.185.23:30201 >> /home/bitcoin-scrypt/.bitcoin-scrypt/bi
 RUN echo addnode=65.102.140.115:30201 >> /home/bitcoin-scrypt/.bitcoin-scrypt/bitcoin-scrypt.conf
 RUN chmod 0600 /home/bitcoin-scrypt/.bitcoin-scrypt/bitcoin-scrypt.conf
 
-ENTRYPOINT ["/usr/local/bin/bitcoin-scryptd", "--help"]
-
+VOLUME     "/home/bitcoin-scrypt"
