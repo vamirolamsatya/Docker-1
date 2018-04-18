@@ -15,4 +15,5 @@ cd Docker/dockerfiles/bitcoin-scrypt
 ./build.sh
 ./setup.sh
 ./run.sh
+bitcoin-scryptd -daemon
 ```
