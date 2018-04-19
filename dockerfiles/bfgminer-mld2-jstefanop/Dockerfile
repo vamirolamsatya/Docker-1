@@ -4,7 +4,7 @@
 # ex: docker run creack/cpuminer --url stratum+tcp://ltc.pool.com:80 --user creack.worker1 --pass abcdef
 #
 
-FROM       debian:9.4
+FROM       ubuntu:latest
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
 
 RUN apt-get update
