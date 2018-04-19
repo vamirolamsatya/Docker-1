@@ -62,8 +62,6 @@ RUN echo addnode=62.59.168.89:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN echo addnode=45.55.216.92:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN echo addnode=79.137.57.54:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN echo addnode=81.7.13.208:30201    >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
-RUN echo addnode=79.137.57.54:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 RUN chmod 0600 ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 
-VOLUME "/home/bitcoin-scrypt"
-WORKDIR "/home/bitcoin-scrypt"
+VOLUME ${BTCS_USER_HOMEDIR}
