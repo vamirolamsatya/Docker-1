@@ -29,15 +29,15 @@ RUN apt-get -y install libboost-system1.58-dev libboost-filesystem1.58-dev \
                        libboost-program-options1.58-dev libboost-thread1.58-dev \
                        libdb4.8++-dev libssl-dev build-essential git
 
+RUN apt-get -y install libboost-system1.58.0 libboost-filesystem1.58.0 \
+                       libboost-program-options1.58.0 libboost-thread1.58.0 \
+                       libdb4.8++ libssl1.0.0
+
 RUN git clone ${BTCS_BUILD_GITHUB} ${BTCS_BUILD_SRCDIR}
 RUN cd ${BTCS_BUILD_SRCDIR}/src && make -f makefile.unix USE_UPNP=- USE_IPV6=1
 RUN strip ${BTCS_BUILD_SRCDIR}/src/${BTCS_OUT_BINARY}
 RUN install -m 0755 ${BTCS_BUILD_SRCDIR}/src/${BTCS_OUT_BINARY} ${BTCS_OUT_DIRECTORY}/${BTCS_OUT_BINARY}
 RUN rm -rf ${BTCS_BUILD_SRCDIR}
-
-RUN apt-get -y install libboost-system1.58.0 libboost-filesystem1.58.0 \
-                       libboost-program-options1.58.0 libboost-thread1.58.0 \
-                       libdb4.8++ libssl1.0.0
 
 RUN apt-get -y purge   libboost-system1.58-dev libboost-filesystem1.58-dev \
                        libboost-program-options1.58-dev libboost-thread1.58-dev \
