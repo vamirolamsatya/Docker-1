@@ -4,7 +4,7 @@
 #
 FROM ubuntu:16.04
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
-EXPOSE 30200:30200/tcp 30201:30201/tcp
+EXPOSE 30201:30201/tcp
 
 ENV BTCS_BUILD_GITHUB="https://github.com/bitcoin-scrypt/bitcoin-scrypt" \
     BTCS_BUILD_SRCDIR="/usr/src/bitcoin-scrypt" \
@@ -16,7 +16,7 @@ ENV BTCS_BUILD_GITHUB="https://github.com/bitcoin-scrypt/bitcoin-scrypt" \
     BTCS_CONF_FILE="bitcoin-scrypt.conf"
 
 HEALTHCHECK --interval=1m --timeout=10s \
-   CMD curl -sf http://127.0.0.1:30200 | grep Unauthorized
+   CMD curl -s http://127.0.0.1:30200 | grep Unauthorized && true
 
 
 RUN echo deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu xenial main >> /etc/apt/sources.list; \
@@ -52,17 +52,19 @@ USER ${BTCS_USER_NAME}
 RUN mkdir ${BTCS_CONF_DIR}; \
     chmod 0700 ${BTCS_CONF_DIR}
 
-RUN echo rpcuser=${BTCS_USER_NAME}    >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
+RUN echo rpcuser=${BTCS_USER_NAME} >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
     echo rpcpassword=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1) >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
-    echo daemon=1                     >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
-    echo listen=1                     >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
+    echo daemon=1 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
+    echo listen=1 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
     echo addnode=138.201.185.23:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
     echo addnode=65.102.140.115:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
-    echo addnode=62.59.168.89:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
-    echo addnode=45.55.216.92:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
-    echo addnode=79.137.57.54:30201   >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
-    echo addnode=81.7.13.208:30201    >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
+    echo addnode=62.59.168.89:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
+    echo addnode=45.55.216.92:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
+    echo addnode=79.137.57.54:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}; \
+    echo addnode=81.7.13.208:30201 >> ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 
 RUN chmod 0600 ${BTCS_CONF_DIR}/${BTCS_CONF_FILE}
 
 VOLUME ${BTCS_USER_HOMEDIR}
+
+CMD /usr/local/bin/bitcoin-scryptd -daemon && bash
