@@ -11,9 +11,17 @@ Easiest way to get up and running:
 
 ```
 git clone https://github.com/BloodyNora/Docker
-cd Docker/dockerfiles/bitcoin-scrypt
-./build.sh
-./setup.sh
-./run.sh
-bitcoin-scryptd -daemon
+cd Docker/bitcoin-scrypt
+./docker.sh build
+./dorcker.sh setup
+./docker.sh daemon
+<ctrl-p><ctrl-q>
 ```
+
+## Interactive shell
+
+```
+docker attach bitcoin-scrypt
+```
+
+

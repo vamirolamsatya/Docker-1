@@ -38,8 +38,6 @@ function docker_cli {
 		echo "Executing \"${@}\":"
 		${DOCKER} run --rm \
 		              --network=host \
-		              --hostname=${DOCKER_NAME}-cli \
-		              --name=${DOCKER_NAME}-cli \
 		              --mount source=${DOCKER_VOLUME},target=${DOCKER_VOLUME_TARGET} \
 		              -it ${DOCKER_NAME} \
 		              bitcoin-scryptd ${@}
