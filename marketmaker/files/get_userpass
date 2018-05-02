@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source passphrase
+source coins
+./stop
+git pull;
+cp ../exchanges/updateprices .;./updateprices
+cd ..; 
+./m_mm;
+pkill -15 marketmaker; 
+timeout 10 stdbuf -oL $1 ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$passphrase\", \"coins\":$coins}" | tee dexscripts/client.log
+
+
+USERPASS=$(cat dexscripts/client.log | grep userpass | awk -F'[()]' '{print $2}')
+echo "userpass=\"${USERPASS}\"" > dexscripts/userpass
+
