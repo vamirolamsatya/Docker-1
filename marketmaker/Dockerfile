@@ -77,18 +77,6 @@ RUN mkdir ~/.komodo && \
     echo addnode=144.76.94.38 >> ~/.komodo/komodo.conf && \
     echo addnode=89.248.166.91 >> ~/.komodo/komodo.conf
 
-# Blocknation/BNTN AC
-RUN mkdir ~/.komodo/BNTN && \
-    echo rpcport=14358 >> ~/.komodo/BNTN/BNTN.conf && \
-    echo rpcallowip=127.0.0.1 >> ~/.komodo/BNTN/BNTN.conf && \
-    echo rpcuser=komodo-bntn >> ~/.komodo/BNTN/BNTN.conf && \
-    echo rpcpassword=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)  >> ~/.komodo/BNTN/BNTN.conf && \
-    echo server=1 >> ~/.komodo/BNTN/BNTN.conf && \
-    echo listen=1 >> ~/.komodo/BNTN/BNTN.conf && \
-    echo txindex=1 >> ~/.komodo/BNTN/BNTN.conf && \
-    echo addnode=94.130.169.205 >> ~/.komodo/BNTN/BNTN.conf && \
-    echo addnode=78.47.196.146 >> ~/.komodo/BNTN/BNTN.conf
-
 # Revs/REVS AC
 RUN mkdir ~/.komodo/REVS && \
     echo rpcport=10196 >> ~/.komodo/REVS/REVS.conf && \
