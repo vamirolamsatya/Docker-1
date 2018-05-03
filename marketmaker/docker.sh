@@ -50,15 +50,6 @@ function docker_run {
 	fi
 }
 
-function docker_setup {
-	if [ -z "$(${DOCKER} volume ls -q | grep ${DOCKER_VOLUME})" ]; then
-		echo "Volume \"${DOCKER_VOLUME}\" not found, creating!"
-		${DOCKER} volume create ${DOCKER_VOLUME}
-	else
-		echo "Volume \"${DOCKER_VOLUME}\" already existing, exiting!"
-	fi
-}
-
 function docker_shell {
 	if [ -z "$(${DOCKER} ps | grep ${DOCKER_NAME})" ]; then
 		echo "Container \"${DOCKER_NAME}\" is not running, exiting!"
@@ -104,7 +95,6 @@ case "${1}" in
 		echo "  - build   Builds the docker image"
 		echo "  - cleanup Removes built images"
 		echo "  - run     Launches the daemon"
-		echo "  - setup   Creates persistent data volume"
 		echo "  - shell   Attaches to running container"
 		echo "  - stop    Stops the running container"
     echo
