@@ -28,11 +28,11 @@ function docker_cleanup {
 		${DOCKER} image rm ${DOCKER_NAME}
 	fi
 
-  if [ -z "$(${DOCKER} volume ls | grep ${DOCKER_VOLUME})" ]; then
-    echo "Volume \"${DOCKER_VOLUME}\" does not exist, exiting!"
-  else
-    ${DOCKER} volume rm ${DOCKER_VOLUME}
-  fi
+  #if [ -z "$(${DOCKER} volume ls | grep ${DOCKER_VOLUME})" ]; then
+  #  echo "Volume \"${DOCKER_VOLUME}\" does not exist, exiting!"
+  #else
+  #  ${DOCKER} volume rm ${DOCKER_VOLUME}
+  #fi
 
 }
 
