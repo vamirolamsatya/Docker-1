@@ -18,7 +18,7 @@ alias mesh-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/MES
 alias mnz-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/MNZ/MNZ.conf"
 alias axo-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/AXO/AXO.conf"
 alias btch-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/BTCH/BTCH.conf"
-alias pizza-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/PIZA/PIZZA.conf"
+alias pizza-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/PIZZA/PIZZA.conf"
 alias beer-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/BEER/BEER.conf"
 alias ninja-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/NINJA/NINJA.conf"
 alias oot-cli="/home/barterdex/bin/komodo-cli -conf=/home/barterdex/.komodo/OOT/OOT.conf"
