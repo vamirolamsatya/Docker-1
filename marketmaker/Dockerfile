@@ -23,8 +23,6 @@ RUN cd /usr/src && \
     make install && \
     ldconfig
 
-COPY files/profile.d/* /etc/profile.d
-
 RUN useradd -m -d /home/barterdex -s /bin/bash barterdex
 USER barterdex
 
@@ -40,6 +38,7 @@ RUN cd /home/barterdex/SuperNET/iguana/dexscripts && \
     chmod 0600 passphrase
 
 USER root
+COPY files/profile.d/* /etc/profile.d
 COPY files/get_userpass /home/barterdex/SuperNET/iguana/dexscripts
 COPY files/barterdex /home/barterdex/SuperNET/iguana/dexscripts
 RUN cd /home/barterdex/SuperNET/iguana/dexscripts && \
@@ -375,8 +374,8 @@ RUN apt-get -y purge  libtool pkg-config autoconf automake bsdmainutils && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 USER barterdex
 
-VOLUME /home/marketmaker
-WORKDIR /home/marketmaker
+VOLUME /home/barterdex
+WORKDIR /home/barterdex
 
 # no ENTRYPOINT
 # see https://stackoverflow.com/questions/37396144/interactive-container-daemon-process-at-container-startup
