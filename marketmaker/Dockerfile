@@ -23,6 +23,8 @@ RUN cd /usr/src && \
     make install && \
     ldconfig
 
+COPY files/profile.d/* /etc/profile.d
+
 RUN useradd -m -d /home/barterdex -s /bin/bash barterdex
 USER barterdex
 

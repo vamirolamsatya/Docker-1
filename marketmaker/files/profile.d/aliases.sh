@@ -1,0 +1,11 @@
+# shell aliases
+alias cls="clear"
+alias ..="cd .."
+alias ...="cd ../.."
+alias rst="reset"
+alias x="exit"
+alias ls="ls --color=always"
+alias l="ls -lh"
+alias ll="ls -lh"
+alias la="ls -lah"
+alias sysupdate="apt-get update; apt-get -y upgrade; apt-get -y dist-upgrade; apt-get -y autoremove; apt-get -y autoclean; apt-get -y clean"

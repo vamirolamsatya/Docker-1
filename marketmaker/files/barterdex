@@ -36,6 +36,8 @@ curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"enable\",\"coin\":\"CHAIN\"}"
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"enable\",\"coin\":\"PRLPAY\"}"
 
+sleep 10
+
 # World 1
 #curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"KMD\",\"ipaddr\":\"electrum1.cipig.net\",\"port\":10001}"
 #curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"MNZ\",\"ipaddr\":\"electrum1.cipig.net\",\"port\":10002}"
@@ -68,6 +70,8 @@ curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"BTC\",\"ipaddr\":\"electrum.hsmiths.com\",\"port\":50001}"
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"FJC\",\"ipaddr\":\"electrumx1.fujicoin.org\",\"port\":50001}"
 
+sleep 10
+
 ## World 2
 #curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"KMD\",\"ipaddr\":\"electrum2.cipig.net\",\"port\":10001}"
 #curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"MNZ\",\"ipaddr\":\"electrum2.cipig.net\",\"port\":10002}"
@@ -99,6 +103,8 @@ curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"QTUM\",\"ipaddr\":\"s2.qtum.info\",\"port\":50001}"
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"BTC\",\"ipaddr\":\"helicarrier.bauerj.eu\",\"port\":50001}"
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"FJC\",\"ipaddr\":\"electrumx2.fujicoin.org\",\"port\":50001}"
+
+sleep 10
 
 ## Germany / World3
 curl --url "http://127.0.0.1:7783" --data "{\"userpass\":\"$userpass\",\"method\":\"electrum\",\"coin\":\"ARG\",\"ipaddr\":\"173.212.225.176\",\"port\":50081}"
