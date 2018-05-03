@@ -38,7 +38,7 @@ RUN cd /home/barterdex/SuperNET/iguana/dexscripts && \
     chmod 0600 passphrase
 
 USER root
-COPY files/profile.d/* /etc/profile.d
+COPY files/profile.d/* /etc/profile.d/
 COPY files/get_userpass /home/barterdex/SuperNET/iguana/dexscripts
 COPY files/barterdex /home/barterdex/SuperNET/iguana/dexscripts
 RUN cd /home/barterdex/SuperNET/iguana/dexscripts && \
