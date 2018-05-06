@@ -18,6 +18,7 @@ Easiest way to get up and running:
 ```
 git clone https://github.com/BloodyNora/Docker
 cd Docker/marketmarker
+<edit docker.conf with your favourite editor>
 ./docker.sh build
 ./docker.sh run
 ```
