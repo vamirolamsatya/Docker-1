@@ -4,7 +4,7 @@
 #
 FROM ubuntu:16.04
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
-EXPOSE 30201:30201/tcp
+EXPOSE 33350:33350/tcp
 
 ARG DYN_CONFIG_RPCPORT="33350"
 ARG DYN_CONFIG_PORT="33300"
@@ -30,7 +30,7 @@ RUN echo deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu xenial main >> /etc
                        libboost-filesystem1.58.0 libboost-filesystem1.58-dev \
                        libboost-program-options1.58.0 libboost-program-options1.58-dev \
                        libboost-system1.58.0 libboost-system1.58-dev \
-                       libboost-thread1.58.0 libboost-thread1.58-dev \
+                       libboost-thread1.58.0 libboost-thread1.58-dev libboost-chrono1.58-dev \
                        libdb4.8++ libdb4.8++-dev libssl1.0.0 libssl-dev libevent-dev \
                        build-essential autoconf automake libtool pkg-config git && \
     git -c http.sslVerify=false clone https://github.com/duality-solutions/Dynamic ${DYN_SOURCEDIR} && \
@@ -42,6 +42,7 @@ RUN echo deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu xenial main >> /etc
     strip ${DYN_SOURCEDIR}/src/dynamic-tx && \
     strip ${DYN_SOURCEDIR}/src/dynamic-cli && \
     make install && \
+    cd .. && \
     rm -rf ${DYN_SOURCEDIR} && \
     apt-get -y purge   libboost-program-options1.58-dev libboost-filesystem1.58-dev \
                        libboost-system1.58-dev libboost-thread1.58-dev \

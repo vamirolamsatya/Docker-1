@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 . ./docker.conf
 
 GIT=$(which git)
