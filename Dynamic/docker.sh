@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 . ./docker.conf
 
 GIT=$(which git)
@@ -95,7 +95,7 @@ case "${1}" in
 		docker_cleanup
 		;;
 	cli)
-		docker_cli
+		docker_cli ${@}
 		;;
 	daemon)
 		docker_daemon
