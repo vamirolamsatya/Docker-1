@@ -1,13 +1,13 @@
 #
-# Bitcoin-sCrypt Dockerfile
-# https://github.com/bitcoin-scrypt/bitcoin-scrypt
+# Dynamic Dockerfile
+# https://github.com/duality-solutions/Dynamic
 #
 FROM ubuntu:16.04
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
 EXPOSE 33350:33350/tcp
 
-ARG DYN_CONFIG_RPCPORT="33350"
-ARG DYN_CONFIG_PORT="33300"
+ARG DYN_CONFIG_RPCPORT="33350" \
+    DYN_CONFIG_PORT="33300"
 ARG DYN_CONFIG_RPCUSER="dynamic-rpc"
 ARG DYN_CONFIG_RPCPASSWORD="dyn4m1c*du4l1ty#s0lu7ions"
 ARG DYN_CONFIG_DAEMON="1"
