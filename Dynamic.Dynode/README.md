@@ -1,4 +1,4 @@
-# Bitcoin-sCrypt Dockerfile
+# Dynamic Dynode Dockerfile
 
 ## Prerequisites
 
