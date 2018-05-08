@@ -2,7 +2,11 @@
 
 ## Prerequisites
 
-Docker, ~1GB (probably less) of disk space, Dockerfile.
+Docker, ~1GB (probably less) of disk space, Dockerfile. To install Docker, execute this command as root: 
+
+```
+curl -sSL https://get.docker.com | sh
+```
 
 
 ## Building the Docker image
