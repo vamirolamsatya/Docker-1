@@ -13,7 +13,7 @@ Easiest way to get up and running:
 
 ```
 git clone https://github.com/BloodyNora/Docker
-cd Docker/dockerfiles/wolf-m7m-cpuminer-v2
+cd Docker/wolf-m7m-cpuminer-v2
 ./build.sh
 <edit run.sh to suit your needs>
 ./run.sh
