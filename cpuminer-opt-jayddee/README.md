@@ -4,7 +4,7 @@ See https://github.com/JayDDee/cpuminer-opt
 
 ## Prerequisites
 
-Docker, ~350MB of disk space, the Dockerfile.
+Docker, ~400MB of disk space, the Dockerfile.
 
 
 ## Building the Docker image
