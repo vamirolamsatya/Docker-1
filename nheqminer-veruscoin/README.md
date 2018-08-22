@@ -1,6 +1,9 @@
 # Dockerfile for nheqminer by miketout/VerusCoin
 
-See https://github.com/veruscoin/nheqminer for more information.
+For more info see one of these websites: 
+
+ * https://veruscoin.io
+ * https://github.com/veruscoin
 
 ## Prerequisites
 
