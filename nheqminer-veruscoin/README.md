@@ -1,6 +1,6 @@
 # Dockerfile for nheqminer by miketout/VerusCoin
 
-See https://github.com/veruscoin/veruscoin
+See https://github.com/veruscoin/nheqminer for more information.
 
 ## Prerequisites
 
@@ -18,6 +18,15 @@ cd Docker/nheqminer-veruscoin
 <edit run.sh to suit your needs>
 ./run.sh
 ```
+
+## Looking for a pool? 
+
+Consider one of these: 
+
+[VerusPool.xyz](https://veruspool.xyz)
+[LuckPool.net](https://luckpool.net/verus/)
+[GinasisMining](http://vrsc.ginasismining.com)
+[MiningPools.cloud](http://miningpools.cloud/?pool=verus#/)
 
 ## Did this help you? 
 
