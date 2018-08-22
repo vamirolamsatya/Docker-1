@@ -23,10 +23,10 @@ cd Docker/nheqminer-veruscoin
 
 Consider one of these: 
 
-[VerusPool.xyz](https://veruspool.xyz)
-[LuckPool.net](https://luckpool.net/verus/)
-[GinasisMining](http://vrsc.ginasismining.com)
-[MiningPools.cloud](http://miningpools.cloud/?pool=verus#/)
+ * [VerusPool.xyz](https://veruspool.xyz)
+ * [LuckPool.net](https://luckpool.net/verus/)
+ * [GinasisMining](http://vrsc.ginasismining.com)
+ * [MiningPools.cloud](http://miningpools.cloud/?pool=verus#/)
 
 ## Did this help you? 
 
