@@ -8,7 +8,7 @@ This also works on a RaspberryPi 3. In fact, thats what it was made for.
 
 ## Prerequisites
 
-Docker, ~512MB of disk space, Dockerfile.
+[Docker](https://docs.docker.com/), ~512MB of disk space, Dockerfile.
 
 
 ## Building the Docker image
@@ -19,9 +19,8 @@ Easiest way to get up and running:
 git clone https://github.com/BloodyNora/Docker
 cd Docker/bfgminer-mld2-jstefanop
 ./build.sh
-# in the ./conf/ subdir, find a config file to copy and adapt.
-# then, assuming your config file is named yourpool.conf, run:
-./run.sh yourpool
+# edit and/or rename conf/example.conf to suit your needs
+./run.sh example
 ```
 
 ## Did this help you? 
