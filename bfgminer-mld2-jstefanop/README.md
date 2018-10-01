@@ -1,7 +1,8 @@
-# bfgminer-mld2-jstefanop
+# BFGMiner / FutureBit Moonlander 2 Dockerfile
 
-	- https://bitcointalk.org/index.php?topic=2420357.0
-	- http://github.com/jstefanop/bfgminer
+* [jstefanop's BFGMiner repo](https://github.com/jstefanop/bfgminer)
+* [BitcoinTalk support thread](https://bitcointalk.org/index.php?topic=2420357.msg24766858#msg24766858)
+
 
 This also works on a RaspberryPi 3. In fact, thats what it was made for.
 
