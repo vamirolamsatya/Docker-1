@@ -25,7 +25,7 @@ RUN git clone -b futurebit2_driver https://github.com/jstefanop/bfgminer /usr/sr
 # Cleanup
 RUN apt -y purge build-essential autoconf automake libtool pkg-config git \
     libusb-1.0-0-dev libjansson-dev libgmp-dev libgmp-dev \
-    libcurl4-openssl-dev libssl-dev libgcrypt2-dev \
+    libcurl4-openssl-dev libssl-dev libgcrypt20-dev \
     libevent-dev uthash-dev libncurses5-dev; \
     apt -y autoremove; apt -y autoclean; apt -y clean; \
     rm -rf /var/lib/apt/lists/*; rm -rf /usr/src/bfgminer
