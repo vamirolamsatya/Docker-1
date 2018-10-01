@@ -19,7 +19,7 @@ Easiest way to get up and running:
 git clone https://github.com/BloodyNora/Docker
 cd Docker/bfgminer-mld2-jstefanop
 ./build.sh
-# edit and/or rename conf/example.conf to suit your needs
+<edit and/or rename conf/example.conf to suit your needs>
 ./run.sh example
 ```
 
