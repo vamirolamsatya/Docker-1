@@ -20,8 +20,7 @@ RUN useradd -m -d /home/komodo -s /bin/bash komodo
 
 USER komodo
                        
-RUN git clone https://github.com/jl777/komodo ~/komodo-src
-#RUN cd ~/komodo-src && git checkout mergemaster
+RUN git clone https://github.com/jl777/komodo -b dev ~/komodo-src
 RUN cd ~/komodo-src && ./zcutil/fetch-params.sh
 RUN cd ~/komodo-src && ./zcutil/build.sh -j$(nproc --ignore=2)
 
@@ -40,13 +39,6 @@ RUN echo rpcpassword=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head
 RUN echo server=1 >> ~/.komodo/komodo.conf
 RUN echo listen=1 >> ~/.komodo/komodo.conf
 RUN echo txindex=1 >> ~/.komodo/komodo.conf
-RUN echo addnode=5.9.102.210 >> ~/.komodo/komodo.conf
-RUN echo addnode=78.47.196.146 >> ~/.komodo/komodo.conf
-RUN echo addnode=178.63.69.164 >> ~/.komodo/komodo.conf
-RUN echo addnode=88.198.65.74 >> ~/.komodo/komodo.conf
-RUN echo addnode=5.9.122.241 >> ~/.komodo/komodo.conf
-RUN echo addnode=144.76.94.38 >> ~/.komodo/komodo.conf
-RUN echo addnode=89.248.166.91 >> ~/.komodo/komodo.conf
 
 USER root
 
