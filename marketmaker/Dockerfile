@@ -2,7 +2,7 @@
 # BarterDEX/marketmaker Dockerfile
 # https://github.com/jl777/SuperNET
 #
-FROM debian:9.4
+FROM debian:9.5
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
 EXPOSE 0-65535:0-65535/tcp
 

@@ -2,7 +2,7 @@
 # Bitcoin-sCrypt Dockerfile
 # https://github.com/bitcoin-scrypt/bitcoin-scrypt
 #
-FROM ubuntu:16.04
+FROM debian:9.5
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
 EXPOSE 7770:7770/tcp 7771:7771/tcp
 
@@ -51,5 +51,6 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 USER komodo
 VOLUME "/home/komodo"
-ENTRYPOINT ["/home/komodo/bin/komodod", "-daemon"]
+CMD "/home/komodo/bin/komodod -daemon"
+yypENTRYPOINT ["/home/komodo/bin/komodod", "-daemon"]
 
