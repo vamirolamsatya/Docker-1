@@ -22,15 +22,3 @@ cd Docker/bfgminer-mld2-jstefanop
 <edit and/or rename conf/example.conf to suit your needs>
 ./run.sh example
 ```
-
-## Did this help you? 
-
-Consider donating!
-
-```
-LTC:  MHJN9mHjgYzqHQPXNCeYuxmnN4N3vneSvR
-BTCS: 12aYzfPWEaYPiAwaVCPgM3DQgekXDFSrKv
-EMC2: EfN8Q6bado86srxa66nVKJkfcwDBhbiiow
-ABY:  ALHkvwbujjQCjFPujomuLdYi5ZbMeNGG7f
-DGB:  DFkcHMPgT9hR2VjFTx6QaSfSiazKhubnXD
-```
