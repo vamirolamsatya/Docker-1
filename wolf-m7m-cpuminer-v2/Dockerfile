@@ -19,11 +19,6 @@ RUN	git clone ${GITHUB} ${WORKDIR} && \
     cd ${WORKDIR} && ./autogen.sh && \
     ./configure CFLAGS="-O3" && \
     make -j$(nproc --ignore=1)
-
-RUN apt -y purge build-essential autoconf automake libjansson-dev \
-    libgmp-dev libcurl4-openssl-dev libssl-dev git; \
-    apt -y autoremove; apt -y autoclean; apt -y clean; \
-    rm -rf /var/lib/apt/lists/*
-
+    
 WORKDIR ${WORKDIR}
 ENTRYPOINT ["./minerd", "-a", "m7mhash"]
