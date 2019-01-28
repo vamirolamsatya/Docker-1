@@ -9,8 +9,21 @@ MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
 ENV GITHUB="https://github.com/magi-project/wolf-m7m-cpuminer-V2" \
 WORKDIR="/usr/src/wolf-m7m-cpuminer-v2"
 
-RUN apt-get update && apt-get install -y build-essential autoconf automake libjansson-dev libgmp-dev libcurl4-openssl-dev libssl-dev git
-RUN	git clone ${GITHUB} ${WORKDIR} && cd ${WORKDIR} && perl -pi -e "s/\-flto//g" * && cd ${WORKDIR}/m7 && perl -pi -e "s/\-flto//g" * && cd ${WORKDIR} && ./autogen.sh && cd ${WORKDIR} && ./configure CFLAGS="-O3" && cd ${WORKDIR} && make -j$(nproc --ignore=1)
+RUN apt update && apt -y upgrade && \
+    apt -y install -y build-essential autoconf automake libjansson-dev \
+    libgmp-dev libcurl4-openssl-dev libssl-dev git
+    
+RUN	git clone ${GITHUB} ${WORKDIR} && \
+    cd ${WORKDIR} && perl -pi -e "s/\-flto//g" * && \
+    cd ${WORKDIR}/m7 && perl -pi -e "s/\-flto//g" * && \
+    cd ${WORKDIR} && ./autogen.sh && \
+    ./configure CFLAGS="-O3" && \
+    make -j$(nproc --ignore=1)
+
+RUN apt -y purge build-essential autoconf automake libjansson-dev \
+    libgmp-dev libcurl4-openssl-dev libssl-dev git; \
+    apt -y autoremove; apt -y autoclean; apt -y clean; \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR ${WORKDIR}
 ENTRYPOINT ["./minerd", "-a", "m7mhash"]
