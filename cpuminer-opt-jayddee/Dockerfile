@@ -4,7 +4,7 @@
 # or see run.sh
 #
 
-FROM debian:9.4
+FROM debian:9.5
 MAINTAINER 0x03 <0x03-ctrlc@protonmail.com>
 ENV GITHUB="https://github.com/JayDDee/cpuminer-opt" SRCDIR="/usr/src/cpuminer-opt"
 
