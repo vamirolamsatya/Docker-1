@@ -22,3 +22,11 @@ cd Docker/bfgminer-mld2-jstefanop
 <edit and/or rename conf/example.conf to suit your needs>
 ./run.sh example
 ```
+
+## Re-running the Docker container
+
+```
+docker ps -a
+<Copy down the name of your bfgminer-container, e.g. mld2-emc2>
+docker start mld2-emc2
+```
