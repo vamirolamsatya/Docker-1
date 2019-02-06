@@ -36,7 +36,7 @@ else
 		# 
 		${DOCKER} run --name ${DOCKER_NAME} \
 			--privileged -v /dev/bus/usb:/dev/bus/usb --rm \
-			-it ${DOCKER_DETACH} bfgminer-mld2-jstefanop -o ${POOL_HOST} -u ${WORKER_NAME} -p "${WORKER_PASS}" -S ${MOONLANDER_DEVICES} --set MLD:clock=${MOONLANDER_CLOCK} ${BFGMINER_EXTRA_ARGS}
+			-it ${DOCKER_DETACH} bfgminer-mld2-jstefanop -o ${POOL_HOST} -u ${WORKER_NAME} -p "${WORKER_PASS}" ${MOONLANDER_DEVICES} ${MOONLANDER_CLOCK} ${BFGMINER_EXTRA_ARGS}
 	fi
 fi
 
