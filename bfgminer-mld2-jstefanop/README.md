@@ -30,6 +30,11 @@ docker ps -a
 <Copy down the name of your bfgminer-container, e.g. mld2-emc2>
 docker start mld2-emc2
 ```
+
+## Further notes
+
+If you happen to run both the Moonlanders and any CP1202-based USB-UART-Adapter, `bfgminer` will display an additional, broken miner. You can choose to disable that using `m` to open the device manager, then `arrow up/down` or `page up/down` to naviage and then `d` to disable. However, the proper way would be to introduce `-S MLD:/dev/ttyUSBX` flags in the `BFGMINER_EXTRA_ARGS` variable in your config file.
+
 ## Donate
 
 It's easy! Just **don't** change the `conf/example.conf` file and run the miner like so: `./run.sh example` - this will make it run at my benefit. Thank you!
