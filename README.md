@@ -4,8 +4,9 @@ Various Docker-related content such as shellscripts, Dockerfiles and the like. N
 Most of this is somehow tailored to be run on a Raspberry Pi or Asus Tinkerboard. Heres a cheatsheet to install Docker on linux, on these devices: 
 
 ```
-sudo echo "deb [arch=armhf] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo apt update
-sudo apt -y install docker-ce
+# echo "deb [arch=armhf] https://download.docker.com/linux/debian $(lsb_release -cs) stable" |\
+  sudo tee /etc/apt/sources.list.d/docker.list
+# curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+# sudo apt update
+# sudo apt -y install docker-ce
 ```
