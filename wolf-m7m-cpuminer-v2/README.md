@@ -1,5 +1,7 @@
 # wolf-m7m-cpuminer-V2 Dockerfile
 
+[wolf-m7m-cpuminer-V2 Repository](https://github.com/magi-project/wolf-m7m-cpuminer-V2)
+
 This also works on a RaspberryPi 3.
 
 ## Prerequisites
