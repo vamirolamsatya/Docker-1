@@ -33,7 +33,7 @@ docker start mld2-emc2
 
 ## Further notes
 
-If you happen to run both the Moonlanders and any CP1202-based USB-UART-Adapter, `bfgminer` will display an additional, broken miner. You can choose to disable that using `m` to open the device manager, then `arrow up/down` or `page up/down` to naviage and then `d` to disable. However, the proper way would be to introduce `-S MLD:/dev/ttyUSBX` flags per device in the `MOONLANDER_DEVICES` variable in your config file.
+If you happen to run both the Moonlanders and any USB-UART-adapters on your miner host and use the `-S ALL` device flag, `bfgminer` will display additional, seemingly broken miners, one per UART adapter. Generally, anything that shows up as `/dev/ttyUSBX` will be considered as a miner. You can choose to disable these using `m` to open the device manager, then `arrow up/down` or `page up/down` to naviage and then `d` to disable. However, the proper way would be to introduce `-S MLD:/dev/ttyUSBX` flags per wanted device in the `MOONLANDER_DEVICES` variable in your config file.
 
 ## Donate
 
