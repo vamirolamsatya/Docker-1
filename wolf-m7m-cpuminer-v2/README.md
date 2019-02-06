@@ -18,3 +18,6 @@ cd Docker/wolf-m7m-cpuminer-v2
 <edit run.sh to suit your needs>
 ./run.sh
 ```
+## Donate
+
+It's easy! Just **don't** change the `run.sh` file and start the miner, this will make it run at my benefit! Thank you!
