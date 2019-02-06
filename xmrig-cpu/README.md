@@ -1,6 +1,6 @@
 # xmrig-cpu Dockerfile
 
-This also works on a RaspberryPi 3 or an Asus Tinkerboard.
+This also works on a RaspberryPi 3 or an Asus Tinkerboard. In fact, thats what it was made for.
 
 ## Prerequisites
 
@@ -18,3 +18,7 @@ cd Docker/xmrig-cpu
 <edit run.sh to suit your needs>
 ./run.sh
 ```
+
+## Donate
+
+It's easy! Just *don't* change the `run.sh` file and use it as it is to start the miner. This will make it run at my benefit.
