@@ -1,5 +1,7 @@
 # xmrig-cpu Dockerfile
 
+[XMRIG Github Repository](https://github.com/xmrig/xmrig)
+
 This also works on a RaspberryPi 3 or an Asus Tinkerboard. In fact, thats what it was made for.
 
 ## Prerequisites
