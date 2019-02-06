@@ -32,4 +32,4 @@ docker start mld2-emc2
 ```
 ## Donate
 
-It's easy! Just **don't** change the `conf/example.conf` file and run the miner like so: `./run.sh example.conf` - this will make it run at my benefit. Thank you!
+It's easy! Just **don't** change the `conf/example.conf` file and run the miner like so: `./run.sh example` - this will make it run at my benefit. Thank you!
