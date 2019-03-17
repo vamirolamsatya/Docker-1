@@ -7,7 +7,7 @@ For more info see one of these websites:
 
 ## Prerequisites
 
-Docker, ~400MB of disk space, the Dockerfile.
+[Docker](https://docs.docker.com/install/), ~400MB of disk space and the contents of this directory.
 
 
 ## Building the Docker image
@@ -18,23 +18,19 @@ Easiest way to get up and running:
 git clone https://github.com/BloodyNora/Docker
 cd Docker/nheqminer-veruscoin
 ./build.sh
-<edit run.sh to suit your needs>
+<edit nheqminer.conf to suit your needs>
 ./run.sh
 ```
 
 ## Looking for a pool? 
 
-Consider one of these: 
-
- * [VerusPool.xyz](https://veruspool.xyz)
- * [LuckPool.net](https://luckpool.net/verus/)
- * [GinasisMining](http://vrsc.ginasismining.com)
- * [MiningPools.cloud](http://miningpools.cloud/?pool=verus#/)
+ * [VerusPool.xyz](https://veruspool.xyz) is the 5% fee community pool, donating all of it directly to the VerusCoin Foundation.
+ * A list of other mining pools is on the [VerusCoin website](https://veruscoin.io)
 
 ## Did this help you? 
 
 Consider donating!
 
 ```
-VRSC: RB4E24growBcS5jMLrLTZJTToFdQ7r51VR
+VRSC: RGc2Z3vsX327p5ZUoqgsyY3NFmfKrjoKuD
 ```
