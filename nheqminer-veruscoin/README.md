@@ -1,4 +1,4 @@
-# Dockerfile for nheqminer by miketout/VerusCoin
+# Dockerfile for nheqminer-veruscoin
 
 For more info see one of these websites: 
 
