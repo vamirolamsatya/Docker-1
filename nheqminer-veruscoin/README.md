@@ -24,7 +24,7 @@ cd Docker/nheqminer-veruscoin
 
 ## Looking for a pool? 
 
- * [VerusPool.xyz](https://veruspool.xyz) is the 5% fee community pool, donating all of it directly to the VerusCoin Foundation.
+ * [pool.veruscoin.io](https://pool.veruscoin.io) is the 5% fee community pool, donating all of it directly to the VerusCoin Foundation.
  * A list of other mining pools is on the [VerusCoin website](https://veruscoin.io)
 
 ## Did this help you? 
