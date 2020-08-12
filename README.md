@@ -8,10 +8,10 @@ As of now, only the `ccminer-verus`, `hellminer-verus` and `nheqminer-verus-{bin
 All images are based on `debian:buster-slim`
 
 ```
-REPOSITORY               TAG                 IMAGE ID            CREATED              SIZE
-ccminer-verus            latest              c1ca9c052dba        About a minute ago   83.7MB
-nheqminer-verus-source   latest              72848f86fac9        10 minutes ago       78.7MB
-nheqminer-verus-binary   latest              791888b81707        27 minutes ago       79.4MB
-hellminer-verus          latest              64fb22210d3f        28 minutes ago       83.2MB
-debian                   buster-slim         c7346dd7f20e        7 days ago           69.2MB
+REPOSITORY               TAG                 SIZE
+ccminer-verus            latest              83.7MB
+nheqminer-verus-source   latest              78.7MB
+nheqminer-verus-binary   latest              79.4MB
+hellminer-verus          latest              83.2MB
+debian                   buster-slim         69.2MB
 ```
