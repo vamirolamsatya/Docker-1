@@ -10,6 +10,7 @@ RUN cd /root && apt update && apt -y install wget && wget https://github.com/hel
 	tar xf hellminer_cpu_linux.tar.gz && rm -rf /root/hellminer_cpu_linux.tar.gz && \
 	apt -y purge wget && apt -y autoremove --purge && apt -y clean && apt -y autoclean; rm -rf /var/lib/apt/lists/*
 
+# it needs a workdir spec in order to see the 'verus-solver' binary right next to it
 WORKDIR "/root"
 ENTRYPOINT ["/root/hellminer"]
 
