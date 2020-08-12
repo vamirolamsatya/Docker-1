@@ -9,7 +9,7 @@ else
 	if [ ! -z "${WORKER_NAME}" ]; then
 		PAYOUT_ADDRESS="${PAYOUT_ADDRESS}.${WORKER_NAME}"
 	fi
-	${DOCKER} run --name ${IMAGE_NAME} --rm -it ${IMAGE_NAME} -a verus -o stratum+ssl://${POOL_HOST}:${POOL_PORT} -u ${PAYOUT_ADDRESS} -p x -t ${THREADS}
+	${DOCKER} run --name ${IMAGE_NAME} --rm -it ${IMAGE_NAME} -a verus -o stratum+tcp://${POOL_HOST}:${POOL_PORT} -u ${PAYOUT_ADDRESS} -p x -t ${THREADS}
 fi
 
 # EOF
