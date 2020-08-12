@@ -33,5 +33,5 @@ cd docker/nheqminer-verus-source
 Consider donating!
 
 ```
-VRSC: RGc2Z3vsX327p5ZUoqgsyY3NFmfKrjoKuD
+VRSC: RJgMwyavimFjJ6DtgdkuxxUqWCuKbpf8rp
 ```

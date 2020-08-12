@@ -31,5 +31,5 @@ cd docker/ccminer-verus
 Consider donating!
 
 ```
-VRSC: RGc2Z3vsX327p5ZUoqgsyY3NFmfKrjoKuD
+VRSC: RJgMwyavimFjJ6DtgdkuxxUqWCuKbpf8rp
 ```

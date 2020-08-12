@@ -32,5 +32,5 @@ Please note that `hellminer` only supports mining on `LuckPool`. However, depend
 Consider donating!
 
 ```
-VRSC: RGc2Z3vsX327p5ZUoqgsyY3NFmfKrjoKuD
+VRSC: RJgMwyavimFjJ6DtgdkuxxUqWCuKbpf8rp
 ```
