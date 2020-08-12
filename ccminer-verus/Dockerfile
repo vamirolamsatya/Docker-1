@@ -11,7 +11,7 @@ ENV GITHUB="https://github.com/monkins1010/ccminer" SRCDIR="/usr/src/ccminer"
 RUN apt update && apt -y upgrade && apt -y install build-essential autoconf automake git libssl-dev libcurl4-openssl-dev libgomp1 && \
     git clone ${GITHUB} ${SRCDIR} && cd ${SRCDIR} && \
 	./autogen.sh && ./configure --prefix=/opt/ccminer && make -j$(nproc) && make install && \
-    rm -rf ${SRCDIR} && apt -y purge build-essential autoconf automake git && \
+    rm -rf ${SRCDIR} && apt -y purge build-essential autoconf automake git libssl-dev && \
     apt -y autoremove --purge; apt -y autoclean; apt -y clean; rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/opt/ccminer/bin/ccminer"]
